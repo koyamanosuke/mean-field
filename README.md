@@ -1,21 +1,12 @@
 # Mean-Field Theory
-<font color="Red">テキスト</font>
 This program is developed to solve self-consistent equation due to the application of the mean-field theory(MFT) in quantum spin systems.
-
-"hoge"が何かを簡潔に紹介する
- 
-# DEMO
- 
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
  
 # Features
- 
-"hoge"のセールスポイントや差別化などを説明する
+`mfsw.hpp` is 
  
 # Requirement
- 
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
+* cpplapack-2015.05.11
+
 * huga 3.5.2
 * hogehuga 1.0.2
  
