@@ -1,4 +1,4 @@
-# 'mean-field'
+# `Mean-Field Theory`
  
 分かりやすくて*カッコイイ*名前をつける（今回は"hoge"という名前をつける）
  
