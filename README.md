@@ -7,7 +7,7 @@ This program is developed to solve self-consistent equation due to the applicati
 # Requirement
 * cpplapack-2015.05.11
 * openmpi-4.0.4
-* boost
+* boost-1.78.0
  
 # Author
 * Shinnnosuke Koyama
