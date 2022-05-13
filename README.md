@@ -1,5 +1,6 @@
 # Mean-Field Theory
-<font color="Red">テキスト</font>This program is developed to solve self-consistent equation due to the application of the mean-field theory(MFT) in quantum spin systems.
+<font color="Red">テキスト</font>
+This program is developed to solve self-consistent equation due to the application of the mean-field theory(MFT) in quantum spin systems.
 
 "hoge"が何かを簡潔に紹介する
  
