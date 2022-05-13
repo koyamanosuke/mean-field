@@ -1,7 +1,6 @@
-# `Mean-Field Theory`
- 
-分かりやすくて*カッコイイ*名前をつける（今回は"hoge"という名前をつける）
- 
+# Mean-Field Theory
+This program is developed to solve self-consistent equation due to the application of the mean-field theory(MFT) in quantum spin systems.
+
 "hoge"が何かを簡潔に紹介する
  
 # DEMO
