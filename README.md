@@ -12,3 +12,4 @@ This program is developed to solve self-consistent equation due to the applicati
 # Author
 * Shinnnosuke Koyama
 * koyamashinnosuke@cmpt-serv.phys.tohoku.ac.jp
+* koyama.shinnosuke.r1@dc.tohoku.ac.jp
