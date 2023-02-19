@@ -11,5 +11,4 @@ This program is developed to solve self-consistent equation due to the applicati
  
 # Author
 * Shinnnosuke Koyama
-* Tohoku University
 * koyamashinnosuke@cmpt-serv.phys.tohoku.ac.jp
