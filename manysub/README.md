@@ -6,16 +6,6 @@ built by applying the mean-field theory and spin-wave theory to the general loca
 \mathcal{H} \ = \ \sum_{\langle ij \rangle} \sum_{\xi\xi^\prime} I_{ij}^{\xi\xi^\prime}\mathcal{O}_i^{\xi}\mathcal{O}_j^{\xi^\prime}-\sum_{i}\sum_{\xi} H_i^\xi \mathcal{O}_{i}^\xi
 ```
 
-<!-- aiu
-$$
-\mathcal{H} \ = \ \sum_{\braket{ij}} \sum_{\xi\xi^\prime} I_{ij}^{\xi\xi^\prime} \mathcal{O}_i^{\xi} \mathcal{O}_j^{\xi^\prime}
-- \sum_{i}\sum_{\xi} H_i^\xi \mathcal{O}_{i}^\xi
-\ = \ \mathcal{H}^{\text{MF}} + \mathcal{H}^\prime.
-$$ -->
-<!-- By using following relation,
-$\mathcal{O}_{i}^{\xi} = \braket{\mathcal{O}^\xi}_{\text{MF}:C_i} + \delta\mathcal{O}_i^\xi$,
-where $C_i$ is the sublattice of the site $i$,  -->
-
 One can calculate as following quantities.
 - Local state
 - Spin-wave dispersion
@@ -24,12 +14,12 @@ One can calculate as following quantities.
 - Quasiparticle damping rate
 
 As for the dynamical structure factor, in the linear spin-wave theory, $S_{\xi\xi^\prime}(\mathbf{q},\omega)$ is expressed by
-$$
+```math
 S_{\xi\xi^\prime} (\mathbf{q},\omega)
 \ = \
 \sum_{\eta}^{N} \tilde{W}_{\eta,\mathbf{q}}^{\xi} \tilde{W}_{\eta,\mathbf{q}}^{\xi^\prime*}
 \delta (\omega - \varepsilon_{\eta,\mathbf{q}}),
-$$
+```
 where, N is a number of spin-wave bands and 
 $\varepsilon_{\eta,\mathbf{q}}$ is the excitation energy for the $\eta$-th band.
 
