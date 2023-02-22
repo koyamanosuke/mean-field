@@ -193,7 +193,7 @@ int main(int argc, char *argv[])
 ```
 
 Note the following:
-### 1. ``cout << ms.mf_out() << endl;``  outputs in the following order:
+### 1. ``cout << ms.mf_out() << endl;`` outputs in the following order:
 $$
 \begin{align}
 &E\_{\text{gs}}, \nonumber\\
