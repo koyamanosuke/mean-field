@@ -9,11 +9,11 @@ built by applying the mean-field theory and spin-wave theory to the general loca
 One can calculate as following quantities.
 - Local state
 - Spin-wave dispersion
-- Dynamical structure factor $S(\mathbf{q},\omega)$
+- Dynamical structure factor $ S(\mathbf{q},\omega) $
 - Moment contraction (or SW moment)
 - Quasiparticle damping rate
 
-As for the dynamical structure factor, in the linear spin-wave theory, $S_{\xi\xi^\prime}(\mathbf{q},\omega)$ is expressed by
+As for the dynamical structure factor, in the linear spin-wave theory, $ S_{\xi\xi^\prime}(\mathbf{q},\omega) $ is expressed by
 ```math
 S_{\xi\xi^\prime} (\mathbf{q},\omega)
 \ = \
