@@ -2,7 +2,11 @@
 
 `mfsw_test` is a test directory for running a program, `test.cpp`, 
 built by applying the mean-field theory and spin-wave theory to the general localized interaction model,
-$$\mathcal{H} \ = \ \sum_{\braket{ij}} \sum_{\xi\xi^\prime} I_{ij}^{\xi\xi^\prime} \mathcal{O}_i^{\xi} \mathcal{O}_j^{\xi^\prime} - \sum_{i}\sum_{\xi} H_i^\xi \mathcal{O}_{i}^\xi \ = \ \mathcal{H}^{\text{MF}} + \mathcal{H}^\prime.$$
+$$
+\mathcal{H} \ = \ \sum_{\braket{ij}} \sum_{\xi\xi^\prime} I_{ij}^{\xi\xi^\prime} \mathcal{O}_i^{\xi} \mathcal{O}_j^{\xi^\prime}
+- \sum_{i}\sum_{\xi} H_i^\xi \mathcal{O}_{i}^\xi
+\ = \ \mathcal{H}^{\text{MF}} + \mathcal{H}^\prime.
+$$
 <!-- By using following relation,
 $\mathcal{O}_{i}^{\xi} = \braket{\mathcal{O}^\xi}_{\text{MF}:C_i} + \delta\mathcal{O}_i^\xi$,
 where $C_i$ is the sublattice of the site $i$,  -->
@@ -15,7 +19,12 @@ One can calculate as following quantities.
 - Quasiparticle damping rate
 
 As for the dynamical structure factor, in the linear spin-wave theory, $S_{\xi\xi^\prime}(\mathbf{q},\omega)$ is expressed by
-$$S_{\xi\xi^\prime} (\mathbf{q},\omega) \ = \ \sum_{\eta}^{N} \tilde{W}_{\eta,\mathbf{q}}^{\xi} \tilde{W}_{\eta,\mathbf{q}}^{\xi^\prime*} \delta (\omega - \varepsilon_{\eta,\mathbf{q}}),$$
+$$
+S_{\xi\xi^\prime} (\mathbf{q},\omega)
+\ = \
+\sum_{\eta}^{N} \tilde{W}_{\eta,\mathbf{q}}^{\xi} \tilde{W}_{\eta,\mathbf{q}}^{\xi^\prime*}
+\delta (\omega - \varepsilon_{\eta,\mathbf{q}}),
+$$
 where, N is a number of spin-wave bands and 
 $\varepsilon_{\eta,\mathbf{q}}$ is the excitation energy for the $\eta$-th band.
 
@@ -213,7 +222,7 @@ As an example, for the data of `"cubic2subbcc"`, the output is as follows.
 ```
 
 ### 2. ``sw << x << " " << ms.exec_sw_out(gamma);``  write out in  `fnsw` in the following order:
-```math
+$$
 \begin{align}
 &x,\
 \varepsilon_{0,\mathbf{q}},\ \varepsilon_{1,\mathbf{q}}, \cdots, \varepsilon_{N,\mathbf{q}},\ 
@@ -224,18 +233,17 @@ As an example, for the data of `"cubic2subbcc"`, the output is as follows.
 & ,\text{Re} (\text{off-diagonal terms}),\ \text{Im}(\text{off-diagonal terms})
 \nonumber
 \end{align}
-```
+$$
 
 ### 3. ``mg << " " << ms.exec_sw_mag_out(xs, g, a, dk) << endl;``  write out in  `fnmg` in the following order:
-
-```math
+$$
 \newcommand{\bbraket}[1]{\langle\langle#1\rangle\rangle}
 \begin{align}
 &\bbraket{\mathcal{O}^{\xi=0}}_{A}, \ \bbraket{\mathcal{O}^{\xi=1}}_{A}, \cdots, \ \bbraket{\mathcal{O}^{\xi=\xi_{\text{max}}}}_{A},\ 
 \bbraket{\mathcal{O}^{\xi=0}}_{B}, \ \cdots, \ \bbraket{\mathcal{O}^{\xi=\xi_{\text{max}}}}_{B}, \
 \bbraket{\mathcal{O}^{\xi=0}}_{C}, \ \cdots \nonumber
 \end{align}
-```
+$$
 where, $\langle\langle ~\cdot~ \rangle\rangle$ is the expectation value in Bogoliubov vacuum.
 
 # Interfaces
