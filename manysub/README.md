@@ -2,11 +2,13 @@
 
 `mfsw_test` is a test directory for running a program, `test.cpp`, 
 built by applying the mean-field theory and spin-wave theory to the general localized interaction model,
-```math
+$$
+
 \mathcal{H} \ = \ \sum_{\braket{ij}} \sum_{\xi\xi^\prime} I_{ij}^{\xi\xi^\prime} \mathcal{O}_i^{\xi} \mathcal{O}_j^{\xi^\prime}
 - \sum_{i}\sum_{\xi} H_i^\xi \mathcal{O}_{i}^\xi
 \ = \ \mathcal{H}^{\text{MF}} + \mathcal{H}^\prime.
-```
+
+$$
 <!-- By using following relation,
 $\mathcal{O}_{i}^{\xi} = \braket{\mathcal{O}^\xi}_{\text{MF}:C_i} + \delta\mathcal{O}_i^\xi$,
 where $C_i$ is the sublattice of the site $i$,  -->
@@ -206,14 +208,14 @@ int main(int argc, char *argv[])
 
 Note the following:
 ### 1. ``cout << ms.mf_out() << endl;``  outputs in the following order:
-```math
+$$
 \begin{align}
 &E_{\text{gs}}, \nonumber\\
 &\braket{\mathcal{O}^{\xi=0}}_{A}, \ \braket{\mathcal{O}^{\xi=1}}_{A}, \cdots, \ \braket{\mathcal{O}^{\xi=\xi_{\text{max}}}}_{A},\ 
 \braket{\mathcal{O}^{\xi=0}}_{B}, \ \cdots, \ \braket{\mathcal{O}^{\xi=\xi_{\text{max}}}}_{B}, \
 \braket{\mathcal{O}^{\xi=0}}_{C}, \ \cdots \nonumber
 \end{align}
-```
+$$
 where, capital alphabets represent sublattices. 
 As an example, for the data of `"cubic2subbcc"`, the output is as follows.
 ```
@@ -236,6 +238,7 @@ As an example, for the data of `"cubic2subbcc"`, the output is as follows.
 ```
 
 ### 3. ``mg << " " << ms.exec_sw_mag_out(xs, g, a, dk) << endl;``  write out in  `fnmg` in the following order:
+
 ```math
 \newcommand{\bbraket}[1]{\langle\langle#1\rangle\rangle}
 \begin{align}
