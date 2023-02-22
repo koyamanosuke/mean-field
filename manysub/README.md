@@ -12,7 +12,7 @@ One can calculate as following quantities.
 - Quasiparticle damping rate
 
 As for the dynamical structure factor, in the linear spin-wave theory, $ S_{\xi\xi^\prime}(\mathbf{q},\omega) $ is expressed by
-$$S_{\xi\xi^\prime} (\mathbf{q},\omega) \ = \ \sum_{\eta}^{N} \tilde{W}_{\eta,\mathbf{q}}^{\xi} \tilde{W}_{\eta,\mathbf{q}}^{\xi^\prime*} \delta (\omega - \varepsilon_{\eta,\mathbf{q}}),$$
+$$S\_{\xi\xi^\prime} (\mathbf{q},\omega) \ = \ \sum\_{\eta}^{N} \tilde{W}\_{\eta,\mathbf{q}}^{\xi} \tilde{W}\_{\eta,\mathbf{q}}^{\xi^\prime*} \delta (\omega - \varepsilon\_{\eta,\mathbf{q}}),$$
 where, N is a number of spin-wave bands and 
 $\varepsilon_{\eta,\mathbf{q}}$ is the excitation energy for the $\eta$-th band.
 
