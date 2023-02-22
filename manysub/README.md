@@ -16,7 +16,7 @@ $$S\_{\xi\xi^\prime} (\mathbf{q},\omega) \ = \ \sum\_{\eta}^{N} \tilde{W}\_{\eta
 where, N is a number of spin-wave bands and 
 $\varepsilon_{\eta,\mathbf{q}}$ is the excitation energy for the $\eta$-th band.
 
-On the program, all $\tilde{W}_{\eta,\mathbf{q}}^{\xi}$ are calculated and 
+On the program, all $\tilde{W}\_{\eta,\mathbf{q}}^{\xi}$ are calculated and 
 written to a file opened by `std::ofstream`.
 
 # Overview
@@ -196,10 +196,10 @@ Note the following:
 ### 1. ``cout << ms.mf_out() << endl;``  outputs in the following order:
 $$
 \begin{align}
-&E_{\text{gs}}, \nonumber\\
-&\braket{\mathcal{O}^{\xi=0}}_{A}, \ \braket{\mathcal{O}^{\xi=1}}_{A}, \cdots, \ \braket{\mathcal{O}^{\xi=\xi_{\text{max}}}}_{A},\ 
-\braket{\mathcal{O}^{\xi=0}}_{B}, \ \cdots, \ \braket{\mathcal{O}^{\xi=\xi_{\text{max}}}}_{B}, \
-\braket{\mathcal{O}^{\xi=0}}_{C}, \ \cdots \nonumber
+&E\_{\text{gs}}, \nonumber\\
+&\braket{\mathcal{O}^{\xi=0}}\_{A}, \ \braket{\mathcal{O}^{\xi=1}}\_{A}, \cdots, \ \braket{\mathcal{O}^{\xi=\xi\_{\text{max}}}}\_{A},\ 
+\braket{\mathcal{O}^{\xi=0}}_{B}, \ \cdots, \ \braket{\mathcal{O}^{\xi=\xi\_{\text{max}}}}\_{B}, \
+\braket{\mathcal{O}^{\xi=0}}\_{C}, \ \cdots \nonumber
 \end{align}
 $$
 where, capital alphabets represent sublattices. 
