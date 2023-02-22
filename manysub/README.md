@@ -7,11 +7,11 @@ $$\mathcal{H} \ = \ \sum_{\langle ij \rangle} \sum\_{\xi\xi^\prime} I\_{ij}^{\xi
 One can calculate as following quantities.
 - Local state
 - Spin-wave dispersion
-- Dynamical structure factor $ S(\mathbf{q},\omega) $
+- Dynamical structure factor $S(\mathbf{q},\omega)$
 - Moment contraction (or SW moment)
 - Quasiparticle damping rate
 
-As for the dynamical structure factor, in the linear spin-wave theory, $ S_{\xi\xi^\prime}(\mathbf{q},\omega) $ is expressed by
+As for the dynamical structure factor, in the linear spin-wave theory, $S\_{\xi\xi^\prime}(\mathbf{q},\omega)$ is expressed by
 $$S\_{\xi\xi^\prime} (\mathbf{q},\omega) \ = \ \sum\_{\eta}^{N} \tilde{W}\_{\eta,\mathbf{q}}^{\xi} \tilde{W}\_{\eta,\mathbf{q}}^{\xi^\prime*} \delta (\omega - \varepsilon\_{\eta,\mathbf{q}}),$$
 where, N is a number of spin-wave bands and 
 $\varepsilon_{\eta,\mathbf{q}}$ is the excitation energy for the $\eta$-th band.
