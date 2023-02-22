@@ -2,7 +2,9 @@
 
 `mfsw_test` is a test directory for running a program, `test.cpp`, 
 built by applying the mean-field theory and spin-wave theory to the general localized interaction model,
-$$\mathcal{H} \ = \ \sum_{\langle ij \rangle} \sum_{\xi\xi^\prime} I_{ij}^{\xi\xi^\prime}\mathcal{O}_i^{\xi}\mathcal{O}_j^{\xi^\prime}-\sum_{i}\sum_{\xi} H_i^\xi \mathcal{O}_{i}^\xi$$
+```math
+\mathcal{H} \ = \ \sum_{\langle ij \rangle} \sum_{\xi\xi^\prime} I_{ij}^{\xi\xi^\prime}\mathcal{O}_i^{\xi}\mathcal{O}_j^{\xi^\prime}-\sum_{i}\sum_{\xi} H_i^\xi \mathcal{O}_{i}^\xi
+```
 
 <!-- aiu
 $$
