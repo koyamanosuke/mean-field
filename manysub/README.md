@@ -19,13 +19,12 @@ One can calculate as following quantities.
 - Quasiparticle damping rate
 
 As for the dynamical structure factor, in the linear spin-wave theory, $S_{\xi\xi^\prime}(\mathbf{q},\omega)$ is expressed by
-$$
-
+```math
 S_{\xi\xi^\prime} (\mathbf{q},\omega)
 \ = \
 \sum_{\eta}^{N} \tilde{W}_{\eta,\mathbf{q}}^{\xi} \tilde{W}_{\eta,\mathbf{q}}^{\xi^\prime*}
 \delta (\omega - \varepsilon_{\eta,\mathbf{q}}),
-$$
+```
 where, N is a number of spin-wave bands and 
 $\varepsilon_{\eta,\mathbf{q}}$ is the excitation energy for the $\eta$-th band.
 
@@ -207,14 +206,14 @@ int main(int argc, char *argv[])
 
 Note the following:
 ### 1. ``cout << ms.mf_out() << endl;``  outputs in the following order:
-$$
+```math
 \begin{align}
 &E_{\text{gs}}, \nonumber\\
 &\braket{\mathcal{O}^{\xi=0}}_{A}, \ \braket{\mathcal{O}^{\xi=1}}_{A}, \cdots, \ \braket{\mathcal{O}^{\xi=\xi_{\text{max}}}}_{A},\ 
 \braket{\mathcal{O}^{\xi=0}}_{B}, \ \cdots, \ \braket{\mathcal{O}^{\xi=\xi_{\text{max}}}}_{B}, \
 \braket{\mathcal{O}^{\xi=0}}_{C}, \ \cdots \nonumber
 \end{align}
-$$
+```
 where, capital alphabets represent sublattices. 
 As an example, for the data of `"cubic2subbcc"`, the output is as follows.
 ```
@@ -223,7 +222,7 @@ As an example, for the data of `"cubic2subbcc"`, the output is as follows.
 ```
 
 ### 2. ``sw << x << " " << ms.exec_sw_out(gamma);``  write out in  `fnsw` in the following order:
-$$
+```math
 \begin{align}
 &x,\
 \varepsilon_{0,\mathbf{q}},\ \varepsilon_{1,\mathbf{q}}, \cdots, \varepsilon_{N,\mathbf{q}},\ 
@@ -234,17 +233,17 @@ $$
 & ,\text{Re} (\text{off-diagonal terms}),\ \text{Im}(\text{off-diagonal terms})
 \nonumber
 \end{align}
-$$
+```
 
 ### 3. ``mg << " " << ms.exec_sw_mag_out(xs, g, a, dk) << endl;``  write out in  `fnmg` in the following order:
-$$
+```math
 \newcommand{\bbraket}[1]{\langle\langle#1\rangle\rangle}
 \begin{align}
 &\bbraket{\mathcal{O}^{\xi=0}}_{A}, \ \bbraket{\mathcal{O}^{\xi=1}}_{A}, \cdots, \ \bbraket{\mathcal{O}^{\xi=\xi_{\text{max}}}}_{A},\ 
 \bbraket{\mathcal{O}^{\xi=0}}_{B}, \ \cdots, \ \bbraket{\mathcal{O}^{\xi=\xi_{\text{max}}}}_{B}, \
 \bbraket{\mathcal{O}^{\xi=0}}_{C}, \ \cdots \nonumber
 \end{align}
-$$
+```
 where, $\langle\langle ~\cdot~ \rangle\rangle$ is the expectation value in Bogoliubov vacuum.
 
 # Interfaces
