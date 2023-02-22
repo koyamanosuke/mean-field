@@ -2,9 +2,7 @@
 
 `mfsw_test` is a test directory for running a program, `test.cpp`, 
 built by applying the mean-field theory and spin-wave theory to the general localized interaction model,
-```math
-\mathcal{H} \ = \ \sum_{\langle ij \rangle} \sum\_{\xi\xi^\prime} I\_{ij}^{\xi\xi^\prime}\mathcal{O}\_i^{\xi}\mathcal{O}\_j^{\xi^\prime}-\sum\_{i}\sum_{\xi} H\_i^\xi \mathcal{O}\_{i}^\xi
-```
+$$\mathcal{H} \ = \ \sum_{\langle ij \rangle} \sum\_{\xi\xi^\prime} I\_{ij}^{\xi\xi^\prime}\mathcal{O}\_i^{\xi}\mathcal{O}\_j^{\xi^\prime}-\sum\_{i}\sum_{\xi} H\_i^\xi \mathcal{O}\_{i}^\xi$$
 
 One can calculate as following quantities.
 - Local state
@@ -14,9 +12,7 @@ One can calculate as following quantities.
 - Quasiparticle damping rate
 
 As for the dynamical structure factor, in the linear spin-wave theory, $ S_{\xi\xi^\prime}(\mathbf{q},\omega) $ is expressed by
-```math
-S_{\xi\xi^\prime} (\mathbf{q},\omega) \ = \ \sum_{\eta}^{N} \tilde{W}_{\eta,\mathbf{q}}^{\xi} \tilde{W}_{\eta,\mathbf{q}}^{\xi^\prime*} \delta (\omega - \varepsilon_{\eta,\mathbf{q}}),
-```
+$$S_{\xi\xi^\prime} (\mathbf{q},\omega) \ = \ \sum_{\eta}^{N} \tilde{W}_{\eta,\mathbf{q}}^{\xi} \tilde{W}_{\eta,\mathbf{q}}^{\xi^\prime*} \delta (\omega - \varepsilon_{\eta,\mathbf{q}}),$$
 where, N is a number of spin-wave bands and 
 $\varepsilon_{\eta,\mathbf{q}}$ is the excitation energy for the $\eta$-th band.
 
