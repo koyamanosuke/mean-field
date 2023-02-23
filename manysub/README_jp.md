@@ -288,4 +288,4 @@ $$
 
 - cpplapack-2015.05.11 (header-only library and present in the directory)
 
-- boost (header-only library and present in the directory)
+- boost (header-only library)
