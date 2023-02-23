@@ -2,33 +2,21 @@
 
 `mfsw_test` is a test directory for running a program, `test.cpp`, 
 built by applying the mean-field theory and spin-wave theory to the general localized interaction model,
+
 $$\mathcal{H} \ = \ \sum_{\langle ij \rangle} \sum_{\xi\xi^\prime} I_{ij}^{\xi\xi^\prime}\mathcal{O}_i^{\xi}\mathcal{O}_j^{\xi^\prime}-\sum_{i}\sum_{\xi} H_i^\xi \mathcal{O}_{i}^\xi$$
 
-<!-- aiu
-$$
-\mathcal{H} \ = \ \sum_{\braket{ij}} \sum_{\xi\xi^\prime} I_{ij}^{\xi\xi^\prime} \mathcal{O}_i^{\xi} \mathcal{O}_j^{\xi^\prime}
-- \sum_{i}\sum_{\xi} H_i^\xi \mathcal{O}_{i}^\xi
-\ = \ \mathcal{H}^{\text{MF}} + \mathcal{H}^\prime.
-$$ -->
-<!-- By using following relation,
-$\mathcal{O}_{i}^{\xi} = \braket{\mathcal{O}^\xi}_{\text{MF}:C_i} + \delta\mathcal{O}_i^\xi$,
-where $C_i$ is the sublattice of the site $i$,  -->
-
-One can calculate as following quantities.
+The following quantities can be calculated:
 - Local state
 - Spin-wave dispersion
-- Dynamical structure factor $S(\mathbf{q},\omega)$
+- Dynamical structure factor $S_{\xi\xi^\prime}(\mathbf{q},\omega)$
 - Moment contraction (or SW moment)
 - Quasiparticle damping rate
 
 As for the dynamical structure factor, in the linear spin-wave theory, $S_{\xi\xi^\prime}(\mathbf{q},\omega)$ is expressed by
 $$
-S_{\xi\xi^\prime} (\mathbf{q},\omega)
-\ = \
-\sum_{\eta}^{N} \tilde{W}_{\eta,\mathbf{q}}^{\xi} \tilde{W}_{\eta,\mathbf{q}}^{\xi^\prime*}
-\delta (\omega - \varepsilon_{\eta,\mathbf{q}}),
+S_{\xi\xi^\prime} (\mathbf{q},\omega) \ = \ \sum_{\eta}^{N} \tilde{W}_{\eta,\mathbf{q}}^{\xi} \tilde{W}_{\eta,\mathbf{q}}^{\xi^\prime*}\delta (\omega - \varepsilon_{\eta,\mathbf{q}}),
 $$
-where, N is a number of spin-wave bands and 
+where, $N$ is a number of spin-wave bands and 
 $\varepsilon_{\eta,\mathbf{q}}$ is the excitation energy for the $\eta$-th band.
 
 On the program, all $\tilde{W}_{\eta,\mathbf{q}}^{\xi}$ are calculated and 
@@ -36,7 +24,8 @@ written to a file opened by `std::ofstream`.
 
 # Overview
 Below is the code to calculate the mean-field solution, spin-wave dispersion,
-SW moments, and dynamical structure factor.
+SW moments, and dynamical structure factor
+from the data `"cubic2subbcc"`.
 
 ```cpp:test.cpp
 
@@ -212,14 +201,15 @@ Note the following:
 $$
 \begin{align}
 &E_{\text{gs}}, \nonumber\\
-&\braket{\mathcal{O}^{\xi=0}}_{A}, \ \braket{\mathcal{O}^{\xi=1}}_{A}, \cdots, \ \braket{\mathcal{O}^{\xi=\xi_{\text{max}}}}_{A},\ 
-\braket{\mathcal{O}^{\xi=0}}_{B}, \ \cdots, \ \braket{\mathcal{O}^{\xi=\xi_{\text{max}}}}_{B}, \
-\braket{\mathcal{O}^{\xi=0}}_{C}, \ \cdots \nonumber
+&\langle\mathcal{O}^{\xi=0}\rangle_{A}, \ \langle\mathcal{O}^{\xi=1}\rangle_{A}, \cdots, \ \langle\mathcal{O}^{\xi=\xi_{\text{max}}}\rangle_{A},\ 
+\langle\mathcal{O}^{\xi=0}\rangle_{B}, \ \cdots, \ \langle\mathcal{O}^{\xi=\xi_{\text{max}}}\rangle_{B}, \
+\langle\mathcal{O}^{\xi=0}\rangle_{C}, \ \cdots \nonumber
 \end{align}
 $$
 where, capital alphabets represent sublattices. 
 As an example, for the data of `"cubic2subbcc"`, the output is as follows.
-```
+```bash:output
+
 #  -1.00000e+00   
 0.7071067973 0.5845336644 -0.0056875930 -0.3978543406 0.7071066436 -0.5845336470 0.0056875929 0.3978543288 
 ```
@@ -230,10 +220,9 @@ $$
 &x,\
 \varepsilon_{0,\mathbf{q}},\ \varepsilon_{1,\mathbf{q}}, \cdots, \varepsilon_{N,\mathbf{q}},\ 
 \Big|\tilde{W}_{0,\mathbf{q}}^{\xi=0}\Big|^2, \Big|\tilde{W}_{1,\mathbf{q}}^{\xi=0}\Big|^2 ,\cdots ,\Big|\tilde{W}_{N,\mathbf{q}}^{\xi=0}\Big|^2,\ 
-\Big|\tilde{W}_{0,\mathbf{q}}^{\xi=1}\Big|^2, \Big|\tilde{W}_{1,\mathbf{q}}^{\xi=1}\Big|^2 ,\cdots ,\Big|\tilde{W}_{N,\mathbf{q}}^{\xi=1}\Big|^2,\ \cdots\cdots\cdots\cdots,
-\Big|\tilde{W}_{0,\mathbf{q}}^{\xi=\xi_{\text{max}}}\Big|^2, \Big|\tilde{W}_{1,\mathbf{q}}^{\xi=\xi_{\text{max}}}\Big|^2 ,\cdots ,\Big|\tilde{W}_{N,\mathbf{q}}^{\xi=\xi_{\text{max}}}\Big|^2
-\nonumber\\
-& ,\text{Re} (\text{off-diagonal terms}),\ \text{Im}(\text{off-diagonal terms})
+\Big|\tilde{W}_{0,\mathbf{q}}^{\xi=1}\Big|^2, \Big|\tilde{W}_{1,\mathbf{q}}^{\xi=1}\Big|^2 ,\cdots ,\Big|\tilde{W}_{N,\mathbf{q}}^{\xi=1}\Big|^2,\ \cdots\cdots,
+\Big|\tilde{W}_{0,\mathbf{q}}^{\xi=\xi_{\text{max}}}\Big|^2, \Big|\tilde{W}_{1,\mathbf{q}}^{\xi=\xi_{\text{max}}}\Big|^2 ,\cdots ,\Big|\tilde{W}_{N,\mathbf{q}}^{\xi=\xi_{\text{max}}}\Big|^2,\ 
+\text{Re} (\text{off-diagonal terms}),\ \text{Im}(\text{off-diagonal terms})
 \nonumber
 \end{align}
 $$
@@ -254,10 +243,12 @@ where, $\langle\langle ~\cdot~ \rangle\rangle$ is the expectation value in Bogol
 
 ### ・makedata
 The primary role of `makedata` class is to produce 
-$\mathcal{O}_i$, $I_{ij}$, $H_{i}$, and the primitive lattice vector from the original data.
+$\mathcal{O}_i^\gamma$, $I_{ij}$, $H_{i}$, and the primitive lattice vector from the original data.
 
+The arguments must be the original data files and 
+should be input `"***_lattice.dat"`, `"***_iij.dat"`, and `"***_base.dat"`, in that order.
 ### ・mfsw
-'mfsw' class computes the mean-field solution and above quauntities.
+`mfsw' class is a class that performs calculations.
 In the mean-field solution, we can change the initial values to file read.
 
 For example, we prepare the initial value input file
@@ -268,30 +259,39 @@ and change `ms.exec_mf()` to the following.
 ```cpp:test.cpp
 ms.exec_mf("data/input/init.txt");
 ```
-As a result, the output is as follows.
-```
+When the program is executed, the following output is obtained:
+```bash:output
 #  -1.00000e+00   
 0.7071067812 0.0000000000 0.0000000000 0.7071067812 0.7071067812 0.0000000000 0.0000000000 -0.7071067812 
 ```
-Note that if you put some initial values, it will solve a self-consistent equation for the number of initial values.
+Note that if you put some initial values, it will solve a self-consistent equation for the number of initial values
+and find the most stable solution within the range of those initial values.
 
 # Graphics
 The spin-wave dispersion and dynamical structure factor are plotted by 
 `sw.py` and `spec.py`.
 These python codes use command-line arguments.
 Run these codes as follows:
-```
+```bash
 $ python sw.py M Ne
 $ python spec.py M Ne
 ```
 Here, M is total number of sublattices and Ne is total number of local excited states.
-For `"cubic2subbcc"`, we type as
-```
+
+For example, in `"cubic2subbcc"`, the number of sublattices is 2 and the number of local excited states is 1,
+therfore, we type as
+```bash
 $ python sw.py 2 1
 $ python spec.py 2 1
 ```
 
+In this test program, `spec.py` products a colormap of
+$$
+S(\mathbf{q},\omega) \ = \ \sum_{\xi} S_{\xi\xi} (\mathbf{q},\omega)
+$$
 # Requirement
 - C++11 compatible environment
 
-- cpplapack-2015.05.11 (header-only library)
+- cpplapack-2015.05.11 (header-only library and present in the directory)
+  
+- boost (header-only library and present in the directory)
