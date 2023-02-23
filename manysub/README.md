@@ -2,24 +2,36 @@
 
 `mfsw_test` is a test directory for running a program, `test.cpp`, 
 built by applying the mean-field theory and spin-wave theory to the general localized interaction model,
+<<<<<<< HEAD
 
 $$\mathcal{H} \ = \ \sum_{\langle ij \rangle} \sum_{\xi\xi^\prime} I_{ij}^{\xi\xi^\prime}\mathcal{O}_i^{\xi}\mathcal{O}_j^{\xi^\prime}-\sum_{i}\sum_{\xi} H_i^\xi \mathcal{O}_{i}^\xi$$
 
 The following quantities can be calculated:
+=======
+$$\mathcal{H} \ = \ \sum_{\langle ij \rangle} \sum\_{\xi\xi^\prime} I\_{ij}^{\xi\xi^\prime}\mathcal{O}\_i^{\xi}\mathcal{O}\_j^{\xi^\prime}-\sum\_{i}\sum_{\xi} H\_i^\xi \mathcal{O}\_{i}^\xi$$
+
+One can calculate as following quantities.
+>>>>>>> refs/remotes/origin/main
 - Local state
 - Spin-wave dispersion
 - Dynamical structure factor $S_{\xi\xi^\prime}(\mathbf{q},\omega)$
 - Moment contraction (or SW moment)
 - Quasiparticle damping rate
 
+<<<<<<< HEAD
 As for the dynamical structure factor, in the linear spin-wave theory, $S_{\xi\xi^\prime}(\mathbf{q},\omega)$ is expressed by
 $$
 S_{\xi\xi^\prime} (\mathbf{q},\omega) \ = \ \sum_{\eta}^{N} \tilde{W}_{\eta,\mathbf{q}}^{\xi} \tilde{W}_{\eta,\mathbf{q}}^{\xi^\prime*}\delta (\omega - \varepsilon_{\eta,\mathbf{q}}),
 $$
 where, $N$ is a number of spin-wave bands and 
+=======
+As for the dynamical structure factor, in the linear spin-wave theory, $S\_{\xi\xi^\prime}(\mathbf{q},\omega)$ is expressed by
+$$S\_{\xi\xi^\prime} (\mathbf{q},\omega) \ = \ \sum\_{\eta}^{N} \tilde{W}\_{\eta,\mathbf{q}}^{\xi} \tilde{W}\_{\eta,\mathbf{q}}^{\xi^\prime*} \delta (\omega - \varepsilon\_{\eta,\mathbf{q}}),$$
+where, N is a number of spin-wave bands and 
+>>>>>>> refs/remotes/origin/main
 $\varepsilon_{\eta,\mathbf{q}}$ is the excitation energy for the $\eta$-th band.
 
-On the program, all $\tilde{W}_{\eta,\mathbf{q}}^{\xi}$ are calculated and 
+On the program, all $\tilde{W}\_{\eta,\mathbf{q}}^{\xi}$ are calculated and 
 written to a file opened by `std::ofstream`.
 
 # Overview
@@ -197,13 +209,20 @@ int main(int argc, char *argv[])
 ```
 
 Note the following:
-### 1. ``cout << ms.mf_out() << endl;``  outputs in the following order:
+### 1. ``cout << ms.mf_out() << endl;`` outputs in the following order:
 $$
 \begin{align}
+<<<<<<< HEAD
 &E_{\text{gs}}, \nonumber\\
 &\langle\mathcal{O}^{\xi=0}\rangle_{A}, \ \langle\mathcal{O}^{\xi=1}\rangle_{A}, \cdots, \ \langle\mathcal{O}^{\xi=\xi_{\text{max}}}\rangle_{A},\ 
 \langle\mathcal{O}^{\xi=0}\rangle_{B}, \ \cdots, \ \langle\mathcal{O}^{\xi=\xi_{\text{max}}}\rangle_{B}, \
 \langle\mathcal{O}^{\xi=0}\rangle_{C}, \ \cdots \nonumber
+=======
+&E\_{\text{gs}}, \nonumber\\
+&\braket{\mathcal{O}^{\xi=0}}\_{A}, \ \braket{\mathcal{O}^{\xi=1}}\_{A}, \cdots, \ \braket{\mathcal{O}^{\xi=\xi\_{\text{max}}}}\_{A},\ 
+\braket{\mathcal{O}^{\xi=0}}_{B}, \ \cdots, \ \braket{\mathcal{O}^{\xi=\xi\_{\text{max}}}}\_{B}, \
+\braket{\mathcal{O}^{\xi=0}}\_{C}, \ \cdots \nonumber
+>>>>>>> refs/remotes/origin/main
 \end{align}
 $$
 where, capital alphabets represent sublattices. 
@@ -292,6 +311,10 @@ $$
 # Requirement
 - C++11 compatible environment
 
+<<<<<<< HEAD
 - cpplapack-2015.05.11 (header-only library and present in the directory)
   
 - boost (header-only library)
+=======
+- cpplapack-2015.05.11 (header-only library)
+>>>>>>> refs/remotes/origin/main
