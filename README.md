@@ -1,5 +1,5 @@
 # Mean-Field Theory
-This repository is designed for the numerical solution of self-consistent equations that arise from applying mean-field theory to localized quantum models such as the Ising model or Heisenberg model.
+This repository is designed for the numerical solution of self-consistent equations that arise from applying the mean-field theory to the localized quantum models such as the Ising model or Heisenberg model.
  
 # Requirement
 * cpplapack-2015.05.11
