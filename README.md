@@ -1,5 +1,5 @@
 # Mean-Field Theory
-This program is developed to solve self-consistent equation due to the application of the mean-field theory(MFT) in quantum spin systems.
+This repository is designed to numerically solve self-consistent equations arising from the application of the mean-field theory (MFT) to the localized quantum models. $aieuo$
  
 # Features
 `./manysub/mf.hpp` is a file applying MFT in a quantum spin model and solving self-consistent equation. Information about system, for example, the structure of lattice, the number of sublattices and spin　interaction, *etc.* is entered in `~.cpp` file.
@@ -11,5 +11,6 @@ This program is developed to solve self-consistent equation due to the applicati
  
 # Author
 * Shinnnosuke Koyama
-* koyamashinnosuke@cmpt-serv.phys.tohoku.ac.jp
-* koyama.shinnosuke.r1@dc.tohoku.ac.jp
+
+# Contact 
+* koyamashinnosuke@cmpt.phys.tohoku.ac.jp
